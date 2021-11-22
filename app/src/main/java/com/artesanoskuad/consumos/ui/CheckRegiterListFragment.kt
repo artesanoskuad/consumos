@@ -1,4 +1,4 @@
-package com.artesanoskuad.consumos.view
+package com.artesanoskuad.consumos.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,9 +9,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.artesanoskuad.consumos.R
 import com.artesanoskuad.consumos.databinding.FragmentCheckRegisterListBinding
-import com.artesanoskuad.consumos.model.Items
 
-class CheckResiterListFragment : Fragment() {
+class CheckRegiterListFragment : Fragment() {
 
     private var _binding: FragmentCheckRegisterListBinding? = null
     private val binding get() = _binding!!
@@ -36,25 +35,13 @@ class CheckResiterListFragment : Fragment() {
 
     private fun setupRecyclerView() {
         context?.let { notNullContext ->
-            val adapter = CheckItemAdapter(fakesValues())
+            val adapter = CheckItemAdapter(emptyList())
             val layoutManager = LinearLayoutManager(notNullContext)
             with(binding){
                 rvListCheckRegister.adapter = adapter
                 rvListCheckRegister.layoutManager = layoutManager
             }
         }
-    }
-
-    fun fakesValues() : List<Items> {
-        val list = ArrayList<Items>()
-        for(indice in 1..100){
-            list.add(createFakeItem(indice))
-        }
-        return  list
-    }
-
-    private fun createFakeItem(indice: Int): Items {
-        return Items(indice, "name : $indice", indice, indice)
     }
 
     override fun onDestroyView() {

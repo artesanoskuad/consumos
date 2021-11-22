@@ -9,7 +9,7 @@ import androidx.room.Update
 @Dao
 interface ItemsDao {
     @Query("SELECT * FROM items")
-    fun getAll(): LiveData<List<Items>>
+    fun getAll(): List<Items>
 
     @Insert
     fun insertAll(vararg items: Items)

@@ -1,4 +1,4 @@
-package com.artesanoskuad.consumos.view
+package com.artesanoskuad.consumos.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/checkRegisterListFragment"
-        android:name="com.artesanoskuad.consumos.view.CheckResiterListFragment"
+        android:name="com.artesanoskuad.consumos.ui.CheckRegiterListFragment"
         android:label="@string/check_register_list_fragment_label"
         tools:layout="@layout/fragment_check_register_list">
 

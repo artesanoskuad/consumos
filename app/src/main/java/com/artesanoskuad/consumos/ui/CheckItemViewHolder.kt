@@ -1,4 +1,4 @@
-package com.artesanoskuad.consumos.view
+package com.artesanoskuad.consumos.ui
 
 import androidx.recyclerview.widget.RecyclerView
 import com.artesanoskuad.consumos.databinding.ItemCheckRegisterBinding
