@@ -21,6 +21,7 @@ class CheckItemViewModel(
                 val responseItems = consumosDatabase.itemsDao().getAll()
                 handleResponse(responseItems)
             } catch(e: Exception){
+                e.printStackTrace()
                 mutableState.postValue(ShowServerErrorViewState)
             }
         }
